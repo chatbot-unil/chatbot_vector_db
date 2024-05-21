@@ -18,7 +18,7 @@ docker-compose up # sur le répertoire chatbot_project/
 # sur le répertoire chatbot_project/vectordb/ utilisation du Dockerfile
 docker build -t chromadb . # pour construire l'image docker
 # pour lancer le conteneur docker (les ports sont exposés dans le Dockerfile)
-¨docker run -d -p 5000:5000 chromadb
+docker run -d -p 3003:8000 --name chromadb_container chromadb
 ```
 
 link docker hub : [chromadb](https://hub.docker.com/r/chromadb/chroma)
