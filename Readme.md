@@ -13,7 +13,10 @@ La base de données vectorisée sera contenue dans un conteneur Docker. La base 
 La base de données vectorisée est contenue dans un conteneur Docker. Pour que cela sois pratique j'ai mis en place un Dockerfile et un docker-compose.yml. Pour lancer la base de données vectorisée il suffit de lancer la commande suivante :
 
 ```bash
-docker-compose up
+docker-compose up # sur le répertoire chatbot_project/
+
+# sur le répertoire chatbot_project/vectordb/ utilisation du Dockerfile
+docker build -t chromadb .
 ```
 
 link docker hub : [chromadb](https://hub.docker.com/r/chromadb/chroma)

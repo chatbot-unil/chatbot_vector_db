@@ -1,5 +1,5 @@
 # vectordb/Dockerfile
-FROM chromadb/chromadb:latest
+FROM chromadb/chroma
 
 # Exposition of the port 3003 for accessing chromadb-server
 EXPOSE 3003
