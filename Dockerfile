@@ -1,5 +1,17 @@
-# vectordb/Dockerfile
-FROM chromadb/chroma
+FROM python:latest
 
-# Exposition of the port 3003 for accessing chromadb-server
-EXPOSE 3003
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY import_data.py .
+COPY attente_chromadb.sh .
+COPY .env .
+
+COPY data /app/data
+
+RUN chmod +x attente_chromadb.sh
+
+CMD ["./attente_chromadb.sh", "python", "import_data.py"]

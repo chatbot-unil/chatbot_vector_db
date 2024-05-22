@@ -1,0 +1,25 @@
+services:
+  init:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: init
+    depends_on:
+      - chromadb
+    environment:
+      - CHROMADB_HOST=chromadb
+      - CHROMADB_PORT=8000
+    networks:
+      - net
+
+  chromadb:
+    image: chromadb/chroma
+    ports:
+      - 3003:8000
+    container_name: chromadb
+    networks:
+      - net
+
+networks:
+  net:
+    driver: bridge
