@@ -1,3 +1,4 @@
+
 import chromadb
 import os
 from dotenv import load_dotenv
@@ -18,19 +19,9 @@ chroma_client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
 
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(api_key=os.getenv("OPENAI_API_KEY"), model_name="text-embedding-3-small")
 
-collection = chroma_client.create_collection(name="students_autumn_2011_2021", embedding_function=openai_ef)
+collection = chroma_client.create_collection(name="annuaire_statistique", embedding_function=openai_ef)
 
-files = [
-    "data/students_autumn/FBM.json",
-    "data/students_autumn/FCUE.json",
-    "data/students_autumn/FDCA.json",
-    "data/students_autumn/FGSE.json",
-    "data/students_autumn/FTSR.json",
-    "data/students_autumn/HEC.json",
-    "data/students_autumn/Lettres.json",
-    "data/students_autumn/SSP.json",
-    "data/students_autumn/TOTAL.json",
-]
+fil = "data/students_autumn/ALL.json"
 
 def process_json_files(file_paths):
     documents = []
@@ -39,8 +30,8 @@ def process_json_files(file_paths):
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             context = data.get('context', '')
-            for year, content in data.get('data', {}).items():
-                for faculty, stats in content.items():
+            for year, faculties in data.get('data', {}).items():
+                for faculty, stats in faculties.items():
                     document_content = json.dumps({
                         "year": year,
                         "faculty": faculty,
@@ -52,6 +43,8 @@ def process_json_files(file_paths):
                         "faculty": faculty
                     }
                     documents.append(Document(page_content=document_content, metadata=metadata))
+    
+    print(documents)
 
     for doc in documents:
         collection.add(
@@ -62,6 +55,6 @@ def process_json_files(file_paths):
     
     return documents
 
-documents = process_json_files(files)
+documents = process_json_files([fil])
 
 print(f"Ajout de {len(documents)} documents dans la collection {collection.name}")
