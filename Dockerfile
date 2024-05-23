@@ -14,4 +14,4 @@ COPY data /app/data
 
 RUN chmod +x attente_chromadb.sh
 
-CMD ["./attente_chromadb.sh", "python", "import_data.py"]
+CMD ["./attente_chromadb.sh", "python", "import_students_autumn_data.py"]

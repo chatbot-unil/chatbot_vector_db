@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    container_name: init
+    container_name: init-data
     depends_on:
       - chromadb
     environment:
