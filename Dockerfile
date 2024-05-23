@@ -6,7 +6,7 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY import_data.py .
+COPY import_students_autumn_data.py .
 COPY attente_chromadb.sh .
 COPY .env .
 
