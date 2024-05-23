@@ -55,23 +55,33 @@ def process_json_files(file_paths):
 
 process_json_files([autumn_students_data])
 
-glossary = "data/glossary/glossary.txt"
+glossary = "data/glossary/glossary.json"
 
 def process_glossary(file_path):
-	documents = []
+    documents = []
 
-	with open(file_path , 'r', encoding='utf-8') as f:
-		data = f.read()
-		documents.append(Document(page_content=data, metadata={"context": "c'est donnée contient des définitions (glossaire) de l'annuaire statistique de l'Université de Lausanne"}))
-	
-	for doc in documents:
-		collection.add(
-			ids=[str(uuid.uuid1())],
-			metadatas=[doc.metadata],
-			documents=[doc.page_content]
-		)
-	
-	print(f"Ajout de {len(documents)} documents dans la collection {collection.name}")
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        context = data.get('context', '')
+        for term, definition in data.get('data', {}).items():
+            document_content = json.dumps({
+                "term": term,
+                "definition": definition
+            }, ensure_ascii=False)
+            metadata = {
+                "context": context,
+                "term": term
+            }
+            documents.append(Document(page_content=document_content, metadata=metadata))
+
+    for doc in documents:
+        collection.add(
+            ids=[str(uuid.uuid1())],
+            metadatas=[doc.metadata],
+            documents=[doc.page_content]
+        )
+
+    print(f"Ajout de {len(documents)} documents dans la collection {collection.name}")
 
 process_glossary(glossary)
 
