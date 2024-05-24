@@ -1,0 +1,706 @@
+{
+    "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FBM depuis 2012 a l'université de Lausanne.",
+	"data" : {
+		"2011": {
+			"Lettres": {
+				"femmes": 1538,
+				"hommes": 779,
+				"etranger": 562,
+				"CH": 1755,
+				"total": 2317
+			},
+			"FBM": {
+				"femmes": 1519,
+				"hommes": 1085,
+				"etranger": 556,
+				"CH": 2048,
+				"total": 2604
+			},
+			"FGSE": {
+				"femmes": 301,
+				"hommes": 433,
+				"etranger": 132,
+				"CH": 602,
+				"total": 734
+			},
+			"TOTAL": {
+				"femmes": 6767,
+				"hommes": 5445,
+				"etranger": 2967,
+				"CH": 9275,
+				"total": 12242
+			},
+			"HEC": {
+				"femmes": 828,
+				"hommes": 1493,
+				"etranger": 908,
+				"CH": 1413,
+				"total": 2321
+			},
+			"SSP": {
+				"femmes": 1584,
+				"hommes": 965,
+				"etranger": 416,
+				"CH": 2133,
+				"total": 2549
+			},
+			"FDCA": {
+				"femmes": 993,
+				"hommes": 645,
+				"etranger": 370,
+				"CH": 1268,
+				"total": 1638
+			},
+			"FTSR": {
+				"femmes": 34,
+				"hommes": 45,
+				"etranger": 23,
+				"CH": 56,
+				"total": 79
+			}
+		},
+		"2012": {
+			"Lettres": {
+				"femmes": 1512,
+				"hommes": 779,
+				"etranger": 579,
+				"CH": 1712,
+				"total": 2291
+			},
+			"FBM": {
+				"femmes": 1555,
+				"hommes": 1170,
+				"etranger": 626,
+				"CH": 2099,
+				"total": 2725
+			},
+			"FGSE": {
+				"femmes": 331,
+				"hommes": 461,
+				"etranger": 146,
+				"CH": 646,
+				"total": 792
+			},
+			"TOTAL": {
+				"femmes": 7111,
+				"hommes": 5844,
+				"etranger": 3288,
+				"CH": 9667,
+				"total": 12955
+			},
+			"HEC": {
+				"femmes": 914,
+				"hommes": 1673,
+				"etranger": 1036,
+				"CH": 1551,
+				"total": 2587
+			},
+			"SSP": {
+				"femmes": 1726,
+				"hommes": 1045,
+				"etranger": 486,
+				"CH": 2285,
+				"total": 2771
+			},
+			"FDCA": {
+				"femmes": 1034,
+				"hommes": 677,
+				"etranger": 388,
+				"CH": 1323,
+				"total": 1711
+			},
+			"FTSR": {
+				"femmes": 39,
+				"hommes": 39,
+				"etranger": 27,
+				"CH": 51,
+				"total": 78
+			}
+		},
+		"2013": {
+			"Lettres": {
+				"femmes": 1476,
+				"hommes": 796,
+				"etranger": 597,
+				"CH": 1675,
+				"total": 2272
+			},
+			"FBM": {
+				"femmes": 1645,
+				"hommes": 1209,
+				"etranger": 692,
+				"CH": 2162,
+				"total": 2854
+			},
+			"FGSE": {
+				"femmes": 345,
+				"hommes": 468,
+				"etranger": 143,
+				"CH": 670,
+				"total": 813
+			},
+			"TOTAL": {
+				"femmes": 7478,
+				"hommes": 6165,
+				"etranger": 3657,
+				"CH": 9986,
+				"total": 13643
+			},
+			"FCUE": {
+				"femmes": 51,
+				"hommes": 60,
+				"etranger": 72,
+				"CH": 39,
+				"total": 111
+			},
+			"HEC": {
+				"femmes": 997,
+				"hommes": 1741,
+				"etranger": 1168,
+				"CH": 1570,
+				"total": 2738
+			},
+			"SSP": {
+				"femmes": 1849,
+				"hommes": 1144,
+				"etranger": 542,
+				"CH": 2451,
+				"total": 2993
+			},
+			"FDCA": {
+				"femmes": 1063,
+				"hommes": 710,
+				"etranger": 415,
+				"CH": 1358,
+				"total": 1773
+			},
+			"FTSR": {
+				"femmes": 52,
+				"hommes": 37,
+				"etranger": 28,
+				"CH": 61,
+				"total": 89
+			}
+		},
+		"2014": {
+			"Lettres": {
+				"femmes": 1442,
+				"hommes": 785,
+				"etranger": 576,
+				"CH": 1651,
+				"total": 2227
+			},
+			"FBM": {
+				"femmes": 1699,
+				"hommes": 1270,
+				"etranger": 734,
+				"CH": 2235,
+				"total": 2969
+			},
+			"FGSE": {
+				"femmes": 382,
+				"hommes": 476,
+				"etranger": 158,
+				"CH": 700,
+				"total": 858
+			},
+			"TOTAL": {
+				"femmes": 7736,
+				"hommes": 6429,
+				"etranger": 3799,
+				"CH": 10366,
+				"total": 14165
+			},
+			"FCUE": {
+				"femmes": 137,
+				"hommes": 175,
+				"etranger": 154,
+				"CH": 158,
+				"total": 312
+			},
+			"HEC": {
+				"femmes": 1111,
+				"hommes": 1800,
+				"etranger": 1217,
+				"CH": 1694,
+				"total": 2911
+			},
+			"SSP": {
+				"femmes": 1783,
+				"hommes": 1107,
+				"etranger": 528,
+				"CH": 2362,
+				"total": 2890
+			},
+			"FDCA": {
+				"femmes": 1125,
+				"hommes": 772,
+				"etranger": 402,
+				"CH": 1495,
+				"total": 1897
+			},
+			"FTSR": {
+				"femmes": 57,
+				"hommes": 44,
+				"etranger": 30,
+				"CH": 71,
+				"total": 101
+			}
+		},
+		"2015": {
+			"Lettres": {
+				"femmes": 1429,
+				"hommes": 804,
+				"etranger": 569,
+				"CH": 1664,
+				"total": 2233
+			},
+			"FBM": {
+				"femmes": 1735,
+				"hommes": 1288,
+				"etranger": 750,
+				"CH": 2273,
+				"total": 3023
+			},
+			"FGSE": {
+				"femmes": 366,
+				"hommes": 486,
+				"etranger": 166,
+				"CH": 686,
+				"total": 852
+			},
+			"TOTAL": {
+				"femmes": 7705,
+				"hommes": 6484,
+				"etranger": 3749,
+				"CH": 10440,
+				"total": 14189
+			},
+			"FCUE": {
+				"femmes": 117,
+				"hommes": 179,
+				"etranger": 112,
+				"CH": 184,
+				"total": 296
+			},
+			"HEC": {
+				"femmes": 1074,
+				"hommes": 1799,
+				"etranger": 1184,
+				"CH": 1689,
+				"total": 2873
+			},
+			"SSP": {
+				"femmes": 1779,
+				"hommes": 1093,
+				"etranger": 503,
+				"CH": 2369,
+				"total": 2872
+			},
+			"FDCA": {
+				"femmes": 1139,
+				"hommes": 780,
+				"etranger": 430,
+				"CH": 1489,
+				"total": 1919
+			},
+			"FTSR": {
+				"femmes": 66,
+				"hommes": 55,
+				"etranger": 35,
+				"CH": 86,
+				"total": 121
+			}
+		},
+		"2016": {
+			"Lettres": {
+				"femmes": 1363,
+				"hommes": 831,
+				"etranger": 583,
+				"CH": 1611,
+				"total": 2194
+			},
+			"FBM": {
+				"femmes": 1911,
+				"hommes": 1309,
+				"etranger": 792,
+				"CH": 2428,
+				"total": 3220
+			},
+			"FGSE": {
+				"femmes": 346,
+				"hommes": 471,
+				"etranger": 170,
+				"CH": 647,
+				"total": 817
+			},
+			"TOTAL": {
+				"femmes": 7827,
+				"hommes": 6648,
+				"etranger": 3915,
+				"CH": 10560,
+				"total": 14475
+			},
+			"FCUE": {
+				"femmes": 110,
+				"hommes": 175,
+				"etranger": 140,
+				"CH": 145,
+				"total": 285
+			},
+			"HEC": {
+				"femmes": 1032,
+				"hommes": 1867,
+				"etranger": 1196,
+				"CH": 1703,
+				"total": 2899
+			},
+			"SSP": {
+				"femmes": 1798,
+				"hommes": 1134,
+				"etranger": 531,
+				"CH": 2401,
+				"total": 2932
+			},
+			"FDCA": {
+				"femmes": 1201,
+				"hommes": 808,
+				"etranger": 468,
+				"CH": 1541,
+				"total": 2009
+			},
+			"FTSR": {
+				"femmes": 66,
+				"hommes": 53,
+				"etranger": 35,
+				"CH": 84,
+				"total": 119
+			}
+		},
+		"2017": {
+			"Lettres": {
+				"femmes": 1402,
+				"hommes": 827,
+				"etranger": 565,
+				"CH": 1664,
+				"total": 2229
+			},
+			"FBM": {
+				"femmes": 1993,
+				"hommes": 1375,
+				"etranger": 858,
+				"CH": 2510,
+				"total": 3368
+			},
+			"FGSE": {
+				"femmes": 367,
+				"hommes": 512,
+				"etranger": 188,
+				"CH": 691,
+				"total": 879
+			},
+			"TOTAL": {
+				"femmes": 8135,
+				"hommes": 6841,
+				"etranger": 3992,
+				"CH": 10984,
+				"total": 14976
+			},
+			"FCUE": {
+				"femmes": 125,
+				"hommes": 169,
+				"etranger": 126,
+				"CH": 168,
+				"total": 294
+			},
+			"HEC": {
+				"femmes": 1057,
+				"hommes": 1950,
+				"etranger": 1213,
+				"CH": 1794,
+				"total": 3007
+			},
+			"SSP": {
+				"femmes": 1920,
+				"hommes": 1166,
+				"etranger": 547,
+				"CH": 2539,
+				"total": 3086
+			},
+			"FDCA": {
+				"femmes": 1204,
+				"hommes": 789,
+				"etranger": 462,
+				"CH": 1531,
+				"total": 1993
+			},
+			"FTSR": {
+				"femmes": 67,
+				"hommes": 53,
+				"etranger": 33,
+				"CH": 87,
+				"total": 120
+			}
+		},
+		"2018": {
+			"Lettres": {
+				"femmes": 1426,
+				"hommes": 809,
+				"etranger": 554,
+				"CH": 1681,
+				"total": 2235
+			},
+			"FBM": {
+				"femmes": 2112,
+				"hommes": 1369,
+				"etranger": 869,
+				"CH": 2612,
+				"total": 3481
+			},
+			"FGSE": {
+				"femmes": 382,
+				"hommes": 510,
+				"etranger": 188,
+				"CH": 704,
+				"total": 892
+			},
+			"TOTAL": {
+				"femmes": 8480,
+				"hommes": 6854,
+				"etranger": 3967,
+				"CH": 11367,
+				"total": 15334
+			},
+			"FCUE": {
+				"femmes": 179,
+				"hommes": 143,
+				"etranger": 121,
+				"CH": 201,
+				"total": 322
+			},
+			"HEC": {
+				"femmes": 1077,
+				"hommes": 2010,
+				"etranger": 1166,
+				"CH": 1921,
+				"total": 3087
+			},
+			"SSP": {
+				"femmes": 1989,
+				"hommes": 1196,
+				"etranger": 555,
+				"CH": 2630,
+				"total": 3185
+			},
+			"FDCA": {
+				"femmes": 1257,
+				"hommes": 772,
+				"etranger": 482,
+				"CH": 1547,
+				"total": 2029
+			},
+			"FTSR": {
+				"femmes": 58,
+				"hommes": 45,
+				"etranger": 32,
+				"CH": 71,
+				"total": 103
+			}
+		},
+		"2019": {
+			"Lettres": {
+				"femmes": 1422,
+				"hommes": 833,
+				"etranger": 548,
+				"CH": 1707,
+				"total": 2255
+			},
+			"FBM": {
+				"femmes": 2250,
+				"hommes": 1438,
+				"etranger": 905,
+				"CH": 2783,
+				"total": 3688
+			},
+			"FGSE": {
+				"femmes": 413,
+				"hommes": 499,
+				"etranger": 189,
+				"CH": 723,
+				"total": 912
+			},
+			"TOTAL": {
+				"femmes": 8892,
+				"hommes": 6976,
+				"etranger": 4073,
+				"CH": 11795,
+				"total": 15868
+			},
+			"FCUE": {
+				"femmes": 302,
+				"hommes": 156,
+				"etranger": 156,
+				"CH": 302,
+				"total": 458
+			},
+			"HEC": {
+				"femmes": 1082,
+				"hommes": 2022,
+				"etranger": 1182,
+				"CH": 1922,
+				"total": 3104
+			},
+			"SSP": {
+				"femmes": 2039,
+				"hommes": 1187,
+				"etranger": 564,
+				"CH": 2662,
+				"total": 3226
+			},
+			"FDCA": {
+				"femmes": 1327,
+				"hommes": 791,
+				"etranger": 494,
+				"CH": 1624,
+				"total": 2118
+			},
+			"FTSR": {
+				"femmes": 57,
+				"hommes": 50,
+				"etranger": 35,
+				"CH": 72,
+				"total": 107
+			}
+		},
+		"2020": {
+			"Lettres": {
+				"femmes": 1462,
+				"hommes": 812,
+				"etranger": 541,
+				"CH": 1733,
+				"total": 2274
+			},
+			"FBM": {
+				"femmes": 2477,
+				"hommes": 1506,
+				"etranger": 979,
+				"CH": 3004,
+				"total": 3983
+			},
+			"FGSE": {
+				"femmes": 445,
+				"hommes": 502,
+				"etranger": 194,
+				"CH": 753,
+				"total": 947
+			},
+			"TOTAL": {
+				"femmes": 9758,
+				"hommes": 7161,
+				"etranger": 4311,
+				"CH": 12608,
+				"total": 16919
+			},
+			"FCUE": {
+				"femmes": 362,
+				"hommes": 162,
+				"etranger": 186,
+				"CH": 338,
+				"total": 524
+			},
+			"HEC": {
+				"femmes": 1201,
+				"hommes": 2105,
+				"etranger": 1241,
+				"CH": 2065,
+				"total": 3306
+			},
+			"SSP": {
+				"femmes": 2287,
+				"hommes": 1221,
+				"etranger": 604,
+				"CH": 2904,
+				"total": 3508
+			},
+			"FDCA": {
+				"femmes": 1472,
+				"hommes": 807,
+				"etranger": 533,
+				"CH": 1746,
+				"total": 2279
+			},
+			"FTSR": {
+				"femmes": 52,
+				"hommes": 46,
+				"etranger": 33,
+				"CH": 65,
+				"total": 98
+			}
+		},
+		"2021": {
+			"Lettres": {
+				"femmes": 1396,
+				"hommes": 804,
+				"etranger": 477,
+				"CH": 1723,
+				"total": 2200
+			},
+			"FBM": {
+				"femmes": 2578,
+				"hommes": 1530,
+				"etranger": 1039,
+				"CH": 3069,
+				"total": 4108
+			},
+			"FGSE": {
+				"femmes": 421,
+				"hommes": 494,
+				"etranger": 209,
+				"CH": 706,
+				"total": 915
+			},
+			"TOTAL": {
+				"femmes": 9985,
+				"hommes": 7156,
+				"etranger": 4394,
+				"CH": 12747,
+				"total": 17141
+			},
+			"FCUE": {
+				"femmes": 377,
+				"hommes": 158,
+				"etranger": 205,
+				"CH": 330,
+				"total": 535
+			},
+			"HEC": {
+				"femmes": 1209,
+				"hommes": 2094,
+				"etranger": 1197,
+				"CH": 2106,
+				"total": 3303
+			},
+			"SSP": {
+				"femmes": 2403,
+				"hommes": 1225,
+				"etranger": 666,
+				"CH": 2962,
+				"total": 3628
+			},
+			"FDCA": {
+				"femmes": 1553,
+				"hommes": 810,
+				"etranger": 569,
+				"CH": 1794,
+				"total": 2363
+			},
+			"FTSR": {
+				"femmes": 48,
+				"hommes": 41,
+				"etranger": 32,
+				"CH": 57,
+				"total": 89
+			}
+		}
+	}
+}
