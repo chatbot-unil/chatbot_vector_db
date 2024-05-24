@@ -15,7 +15,7 @@ os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 chroma_host = os.getenv("CHROMADB_HOST")
 chroma_port = int(os.getenv("CHROMADB_PORT"))
 
-def process_enrollment_by_faculty(file_paths):
+def process_enrollment_by_faculty_sex_nationality_autumn(file_paths):
     documents = []
 
     for file_path in file_paths:
@@ -113,6 +113,6 @@ if __name__ == "__main__":
     glossary = "data/glossary/glossary.json"
     autumn_students_data_by_domicile = "data/students_autumn/student_enrollment_by_domicile_2011_2021.json"
 
-    process_enrollment_by_faculty([autumn_students_data])
+    process_enrollment_by_faculty_sex_nationality_autumn([autumn_students_data])
     process_glossary(glossary)
     process_student_enrollment_by_domicile([autumn_students_data_by_domicile])
