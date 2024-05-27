@@ -16,4 +16,4 @@ La base de données vectorisée est contenue dans un conteneur Docker. Pour que 
 docker-compose up # sur le répertoire courant
 ```
 
-link docker hub : [chromadb](https://hub.docker.com/r/chromadb/chroma)
+Image docker hub : [chromadb](https://hub.docker.com/r/chromadb/chroma)
