@@ -27,12 +27,14 @@ def process_enrollment_by_faculty_sex_nationality_autumn(file_paths):
                     document_content = json.dumps({
                         "year": year,
                         "faculty": faculty,
-                        "stats": stats
+                        "stats": stats,
+                        "semester": "autumn"
                     }, ensure_ascii=False)
                     metadata = {
                         "context": context,
                         "year": year,
-                        "faculty": faculty
+                        "faculty": faculty,
+                        "semester": "autumn"
                     }
                     documents.append(Document(page_content=document_content, metadata=metadata))
 
@@ -85,13 +87,15 @@ def process_student_enrollment_by_domicile(file_paths):
                             "year": year,
                             "faculty": faculty,
                             "category": category,
-                            "value": value
+                            "value": value,
+                            "semester": "autumn"
                         }, ensure_ascii=False)
                         metadata = {
                             "context": context,
                             "year": year,
                             "faculty": faculty,
-                            "category": category
+                            "category": category,
+                            "semester": "autumn"
                         }
                         documents.append(Document(page_content=document_content, metadata=metadata))
 
