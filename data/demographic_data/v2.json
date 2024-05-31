@@ -1,0 +1,159 @@
+{
+    "context": "Ce document contient des données sur la population étudiante en Suisse et dans le canton de Vaud, le nombre de maturités obtenues en Suisse et dans le canton de Vaud, ainsi que le nombre de naissances 20 ans plus tôt en Suisse et dans le canton de Vaud. Ces données sont disponibles pour les années 2012 à 2022.",
+    "data": {
+        "2012": {
+			"Nb_etudiants" : {
+				"CH" : 138621,
+				"UNIL" : 12955
+			},
+			"Nb_maturites" : {
+				"CH" : 18229,
+				"VD" : 2175
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 86910,
+				"VD" : 8056
+			}
+        },
+        "2013": {
+			"Nb_etudiants" : {
+				"CH" : 142163,
+				"UNIL" : 13643
+			},
+			"Nb_maturites" : {
+				"CH" : 18217,
+				"VD" : 2175
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 83762,
+				"VD" : 7663
+			}
+        },
+        "2014": {
+			"Nb_etudiants" : {
+				"CH" : 143960,
+				"UNIL" : 14165
+			},
+			"Nb_maturites" : {
+				"CH" : 18439,
+				"VD" : 2232
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 82980,
+				"VD" : 7657
+			}
+        },
+        "2015": {
+			"Nb_etudiants" : {
+				"CH" : 145946,
+				"UNIL" : 14189
+			},
+			"Nb_maturites" : {
+				"CH" : 18602,
+				"VD" : 2414
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 82203,
+				"VD" : 7663
+			}
+        },
+        "2016": {
+			"Nb_etudiants" : {
+				"CH" : 148533,
+				"UNIL" : 14475
+			},
+			"Nb_maturites" : {
+				"CH" : 18629,	
+				"VD" : 2360
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 83007,
+				"VD" : 7709
+			}
+        },
+        "2017": {
+			"Nb_etudiants" : {
+				"CH" : 150671,
+				"UNIL" : 14976
+			},
+			"Nb_maturites" : {
+				"CH" : 17918,
+				"VD" : 2484
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 80584,
+				"VD" : 7531
+			}
+        },
+        "2018": {
+			"Nb_etudiants" : {
+				"CH" : 152858,
+				"UNIL" : 15334
+			},
+			"Nb_maturites" : {
+				"CH" : 18787,
+				"VD" : 2562
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 78949,
+				"VD" : 7410
+			}
+        },
+        "2019": {
+			"Nb_etudiants" : {
+				"CH" : 156669,
+				"UNIL" : 15868
+			},
+			"Nb_maturites" : {
+				"CH" : 18873,
+				"VD" : 2731
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 78408,
+				"VD" : 7442
+			}
+        },
+        "2020": {
+			"Nb_etudiants" : {
+				"CH" : 164575,
+				"UNIL" : 16919
+			},
+			"Nb_maturites" : {
+				"CH" : 19098,
+				"VD" : 2867
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 78458,
+				"VD" : 7587
+			}
+        },
+        "2021": {
+			"Nb_etudiants" : {
+				"CH" : 168190,
+				"UNIL" : 17141
+			},
+			"Nb_maturites" : {
+				"CH" : 18510,
+				"VD" : 2556
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 72295,
+				"VD" : 7049
+			}
+        },
+        "2022": {
+			"Nb_etudiants" : {
+				"CH" : 167748,
+				"UNIL" : 16908
+			},
+			"Nb_maturites" : {
+				"CH" : 19175,
+				"VD" : 2777
+			},
+			"Nb_naissances_20_ans_plus_tot" : {
+				"CH" : 72372,
+				"VD" : 6788
+			}
+        }
+    }
+}

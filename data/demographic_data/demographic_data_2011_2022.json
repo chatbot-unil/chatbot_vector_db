@@ -1,0 +1,93 @@
+{
+    "context": "This document traces the statistics of the number of students (nationality, gender, nationality) enrolled in the fall semester since 2012 at the University of Lausanne.",
+    "data": {
+        "2012": {
+            "Nb_etudiants_CH": 138621,
+            "Nb_etudiants_UNIL": 12955,
+            "Nb_maturites_CH": 18229,
+            "Nb_maturites_VD": 2175,
+            "Nb_naissances_20_ans_plus_tot_CH": 86910,
+            "Nb_naissances_20_ans_plus_tot_VD": 8056
+        },
+        "2013": {
+            "Nb_etudiants_CH": 142163,
+            "Nb_etudiants_UNIL": 13643,
+            "Nb_maturites_CH": 18217,
+            "Nb_maturites_VD": 2175,
+            "Nb_naissances_20_ans_plus_tot_CH": 83762,
+            "Nb_naissances_20_ans_plus_tot_VD": 7663
+        },
+        "2014": {
+            "Nb_etudiants_CH": 143960,
+            "Nb_etudiants_UNIL": 14165,
+            "Nb_maturites_CH": 18439,
+            "Nb_maturites_VD": 2232,
+            "Nb_naissances_20_ans_plus_tot_CH": 82980,
+            "Nb_naissances_20_ans_plus_tot_VD": 7657
+        },
+        "2015": {
+            "Nb_etudiants_CH": 145946,
+            "Nb_etudiants_UNIL": 14189,
+            "Nb_maturites_CH": 18602,
+            "Nb_maturites_VD": 2414,
+            "Nb_naissances_20_ans_plus_tot_CH": 82203,
+            "Nb_naissances_20_ans_plus_tot_VD": 7663
+        },
+        "2016": {
+            "Nb_etudiants_CH": 148533,
+            "Nb_etudiants_UNIL": 14475,
+            "Nb_maturites_CH": 18629,
+            "Nb_maturites_VD": 2360,
+            "Nb_naissances_20_ans_plus_tot_CH": 83007,
+            "Nb_naissances_20_ans_plus_tot_VD": 7709
+        },
+        "2017": {
+            "Nb_etudiants_CH": 150671,
+            "Nb_etudiants_UNIL": 14976,
+            "Nb_maturites_CH": 17918,
+            "Nb_maturites_VD": 2484,
+            "Nb_naissances_20_ans_plus_tot_CH": 80584,
+            "Nb_naissances_20_ans_plus_tot_VD": 7531
+        },
+        "2018": {
+            "Nb_etudiants_CH": 152858,
+            "Nb_etudiants_UNIL": 15334,
+            "Nb_maturites_CH": 18787,
+            "Nb_maturites_VD": 2562,
+            "Nb_naissances_20_ans_plus_tot_CH": 78949,
+            "Nb_naissances_20_ans_plus_tot_VD": 7410
+        },
+        "2019": {
+            "Nb_etudiants_CH": 156669,
+            "Nb_etudiants_UNIL": 15868,
+            "Nb_maturites_CH": 18873,
+            "Nb_maturites_VD": 2731,
+            "Nb_naissances_20_ans_plus_tot_CH": 78408,
+            "Nb_naissances_20_ans_plus_tot_VD": 7442
+        },
+        "2020": {
+            "Nb_etudiants_CH": 164575,
+            "Nb_etudiants_UNIL": 16919,
+            "Nb_maturites_CH": 19098,
+            "Nb_maturites_VD": 2867,
+            "Nb_naissances_20_ans_plus_tot_CH": 78458,
+            "Nb_naissances_20_ans_plus_tot_VD": 7587
+        },
+        "2021": {
+            "Nb_etudiants_CH": 168190,
+            "Nb_etudiants_UNIL": 17141,
+            "Nb_maturites_CH": 18510,
+            "Nb_maturites_VD": 2556,
+            "Nb_naissances_20_ans_plus_tot_CH": 72295,
+            "Nb_naissances_20_ans_plus_tot_VD": 7049
+        },
+        "2022": {
+            "Nb_etudiants_CH": 167748,
+            "Nb_etudiants_UNIL": 16908,
+            "Nb_maturites_CH": 19175,
+            "Nb_maturites_VD": 2777,
+            "Nb_naissances_20_ans_plus_tot_CH": 72372,
+            "Nb_naissances_20_ans_plus_tot_VD": 6788
+        }
+    }
+}

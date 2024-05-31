@@ -1,0 +1,153 @@
+{
+	"embedding_model": "text-embedding-3-small",
+	"collections": [
+	  {
+		"name": "students_autumn",
+		"description": "Cette collections contient des données sur les étudiants inscrits à l'UNIL pour le semestre d'automne. Les données sont ventilées plueisuers catégories, notamment par faculté, par sexe, par nationalité, par canton de domicile, etc.",
+		"files": [
+		  {
+			"name": "student_enrollment_by_faculty_2011_2021",
+			"path": "data/students_autumn/student_enrollment_by_faculty_2011_2021.json",
+			"structure": "nested",
+			"root_key": "data",
+			"nested_structure": [
+			  {
+				"key": "year",
+				"type": "integer",
+				"is_root": true,
+				"add_to_metadata": true
+			  },
+			  {
+				"key": "faculty",
+				"type": "object",
+				"add_to_metadata": true,
+				"fields": [
+				  {
+					"name": "femmes",
+					"type": "integer"
+				  },
+				  {
+					"name": "hommes",
+					"type": "integer"
+				  },
+				  {
+					"name": "etranger",
+					"type": "integer"
+				  },
+				  {
+					"name": "CH",
+					"type": "integer"
+				  },
+				  {
+					"name": "total",
+					"type": "integer"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"name": "student_enrollment_by_domicile_2011_2021",
+			"path": "data/students_autumn/student_enrollment_by_domicile_2011_2021.json",
+			"structure": "nested",
+			"root_key": "data",
+			"nested_structure": [
+			  {
+				"key": "year",
+				"type": "integer",
+				"is_root": true,
+				"add_to_metadata": true
+			  },
+			  {
+				"key": "faculty",
+				"type": "object",
+				"add_to_metadata": true,
+				"fields": [
+				  {
+					"name": "VD",
+					"type": "integer"
+				  },
+				  {
+					"name": "CH",
+					"type": "integer"
+				  },
+				  {
+					"name": "Int",
+					"type": "integer"
+				  },
+				  {
+					"name": "NR",
+					"type": "integer"
+				  },
+				  {
+					"name": "Tot",
+					"type": "integer"
+				  }
+				]
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"name": "abbreviations_and_acronyms",
+		"description": "Cette collection contient des abréviations et acronymes utilisés dans l'annuaire de l'UNIL.",
+		"files": [
+		  {
+			"name": "abbreviations_and_acronyms",
+			"path": "data/acronyms/acronyms.json",
+			"structure": "flat",
+			"root_key": "data",
+			"nested_structure": []
+		  }
+		]
+	  },
+	  {
+		"name": "demographics_and_population",
+		"description": "Cette collection contient des données démographiques et de population pour le canton de Vaud et la Suisse. Ces données on été fournies par l'Office fédéral de la statistique.",
+		"files": [
+		  {
+			"name": "demographics_and_population",
+			"path": "data/demographic_data/demographic_data_2011_2022.json",
+			"structure": "nested",
+			"root_key": "data",
+			"nested_structure": [
+			  {
+				"key": "year",
+				"type": "integer",
+				"is_root": true,
+				"add_to_metadata": true,
+				"fields": [
+				  {
+					"name": "Nb_etudiants_CH",
+					"type": "integer"
+				  },
+				  {
+					"name": "Nb_etudiants_UNIL",
+					"type": "integer"
+				  },
+				  {
+					"name": "Nb_maturites_CH",
+					"type": "integer"
+				  },
+				  {
+					"name": "Nb_maturites_VD",
+					"type": "integer"
+				  },
+				  {
+					"name": "Nb_naissances_20_ans_plus_tot_CH",
+					"type": "integer"
+				  },
+				  {
+					"name": "Nb_naissances_20_ans_plus_tot_VD",
+					"type": "integer"
+				  }
+				]
+			  }
+			]
+		  }
+		]
+	  }
+	]
+  }
+  

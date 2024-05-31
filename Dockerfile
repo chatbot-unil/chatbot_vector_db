@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY main.py .
 COPY attente_chromadb.sh .
 COPY .env .
+COPY config.json .
 
 COPY data /app/data
 
