@@ -27,8 +27,8 @@ os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 chroma_host = os.getenv("CHROMADB_HOST", "localhost")
 chroma_port = int(os.getenv("CHROMADB_PORT", 3003))
 
-def pretty_print(obj):
-    return json.dumps(obj, indent=4, ensure_ascii=False)
+def pretty_print(json_data):
+    return json.dumps(json_data, indent=4, ensure_ascii=False)
 
 def convert_value(value, target_type):
     conversion_functions = {
@@ -42,6 +42,68 @@ def convert_value(value, target_type):
     except (ValueError, TypeError, KeyError):
         return None
 
+def process_flat_file(data, file_config, context):
+    documents = []
+    root_key = file_config.get('root_key')
+    
+    for key, value in data[root_key].items():
+        metadata = {'context': context}
+        document_content = {key: value}
+        documents.append(Document(page_content=json.dumps(document_content, ensure_ascii=False), metadata=metadata))
+        logger.debug(f"Contenu du document: {pretty_print(document_content)}")
+        logger.debug(f"Métadonnées: {pretty_print(metadata)}")
+
+    return documents
+
+def process_nested_file(data, file_config, context):
+    documents = []
+    root_key = file_config.get('root_key')
+    nested_structure = file_config.get('nested_structure', [])
+    metadata_keys = [item['key'] for item in nested_structure if item.get('add_to_metadata')]
+    logger.info(f"Ajout de documents à partir de la clé racine {root_key } et de la structure imbriquée {nested_structure}")
+
+    for root_item, nested_data in data[root_key].items():
+        for nested_key, nested_values in nested_data.items():
+            metadata = {}
+            document_content = {}
+
+            for level in nested_structure:
+                key = level['key']
+                if level.get('is_root'):
+                    value = root_item
+                else:
+                    value = nested_key
+                
+                if key in metadata_keys:
+                    metadata[key] = value
+                document_content[key] = value
+
+                if 'fields' in level:
+                    for field in level['fields']:
+                        print(f"Field: {field}")
+                        field_name = field['name']
+
+                        if isinstance(nested_values, dict):
+                            field_value = nested_values.get(field_name, None)
+                        elif isinstance(nested_values, list):
+                            try:
+                                field_value = nested_values[int(field_name)]
+                            except (IndexError, ValueError):
+                                field_value = None
+                        else:
+                            field_value = convert_value(nested_values, field['type'])
+                        
+                        document_content[field_name] = field_value
+                        if field_name in metadata_keys:
+                            metadata[field_name] = field_value
+
+            metadata['context'] = context
+            documents.append(Document(page_content=json.dumps(document_content, ensure_ascii=False), metadata=metadata))
+            logger.debug(f"Contenu du document: {pretty_print(document_content)}")
+            logger.debug(f"Métadonnées: {pretty_print(metadata)}")
+
+    return documents
+
 def process_file(file_config, collection):
     documents = []
     file_path = file_config['path']
@@ -52,61 +114,10 @@ def process_file(file_config, collection):
             context = data.get('context', '')
 
             if file_config.get('structure') == 'nested':
-                root_key = file_config.get('root_key')
-                nested_structure = file_config.get('nested_structure', [])
-                metadata_keys = [item['key'] for item in nested_structure if item.get('add_to_metadata')]
-                logger.info(f"Ajout de documents à partir de la clé racine {root_key } et de la structure imbriquée {nested_structure}")
-
-                for root_item, nested_data in data[root_key].items():
-                    for nested_key, nested_values in nested_data.items():
-                        metadata = {}
-                        document_content = {}
-
-                        for level in nested_structure:
-                            key = level['key']
-                            if level.get('is_root'):
-                                value = root_item
-                            else:
-                                value = nested_key
-                            
-                            if key in metadata_keys:
-                                metadata[key] = value
-                            document_content[key] = value
-
-                            if 'fields' in level:
-                                for field in level['fields']:
-                                    print(f"Field: {field}")
-                                    field_name = field['name']
-                                    
-                                    if isinstance(nested_values, dict):
-                                        field_value = nested_values.get(field_name, None)
-                                    elif isinstance(nested_values, list):
-                                        try:
-                                            field_value = nested_values[int(field_name)]
-                                        except (IndexError, ValueError):
-                                            field_value = None
-                                    else:
-                                        field_value = convert_value(nested_values, field['type'])
-                                    
-                                    document_content[field_name] = field_value
-                                    if field_name in metadata_keys:
-                                        metadata[field_name] = field_value
-
-                        metadata['context'] = context
-                        documents.append(Document(page_content=json.dumps(document_content, ensure_ascii=False), metadata=metadata))
-                        logger.debug(f"Contenu du document: {pretty_print(document_content)}")
-                        logger.debug(f"Métadonnées: {pretty_print(metadata)}")
+                documents = process_nested_file(data, file_config, context)
 
             elif file_config.get('structure') == 'flat':
-                root_key = file_config.get('root_key')
-                logger.info(f"Ajout de documents à partir de la clé racine {root_key}")
-
-                for key, value in data[root_key].items():
-                    metadata = {'context': context}
-                    document_content = {key: value}
-                    documents.append(Document(page_content=json.dumps(document_content, ensure_ascii=False), metadata=metadata))
-                    logger.debug(f"Contenu du document: {pretty_print(document_content)}")
-                    logger.debug(f"Métadonnées: {pretty_print(metadata)}")
+                documents = process_flat_file(data, file_config, context)
         
         for doc in documents:
             collection.upsert(
