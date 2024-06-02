@@ -22,23 +22,23 @@
                             "add_to_metadata": true,
                             "fields": [
                                 {
-                                    "name": "femmes",
+                                    "key": "femmes",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "hommes",
+                                    "key": "hommes",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "etranger",
+                                    "key": "etranger",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "CH",
+                                    "key": "CH",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "total",
+                                    "key": "total",
                                     "type": "integer"
                                 }
                             ]
@@ -63,23 +63,23 @@
                             "add_to_metadata": true,
                             "fields": [
                                 {
-                                    "name": "VD",
+                                    "key": "VD",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "CH",
+                                    "key": "CH",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "Int",
+                                    "key": "Int",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "NR",
+                                    "key": "NR",
                                     "type": "integer"
                                 },
                                 {
-                                    "name": "Tot",
+                                    "key": "Tot",
                                     "type": "integer"
                                 }
                             ]
@@ -88,7 +88,7 @@
                 },
                 {
                     "name": "demographic_data_2011_2022",
-                    "path": "data/demographic_data/demographic_data_2011_2022.json",
+                    "path": "data/demographic_data/v2.json",
                     "structure": "nested",
                     "root_key": "data",
                     "nested_structure": [
@@ -101,46 +101,46 @@
                         {
                             "key": "statistics",
                             "type": "object",
-                            "add_to_metadata": false,
+							"add_to_metadata": true,
                             "fields": [
                                 {
-                                    "name": "Nb_etudiants",
+                                    "key": "Nb_etudiants",
                                     "type": "object",
                                     "fields": [
                                         {
-                                            "name": "CH",
+                                            "key": "CH",
                                             "type": "integer"
                                         },
                                         {
-                                            "name": "UNIL",
+                                            "key": "UNIL",
                                             "type": "integer"
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "Nb_maturites",
+                                    "key": "Nb_maturites",
                                     "type": "object",
                                     "fields": [
                                         {
-                                            "name": "CH",
+                                            "key": "CH",
                                             "type": "integer"
                                         },
                                         {
-                                            "name": "VD",
+                                            "key": "VD",
                                             "type": "integer"
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "Nb_naissances_20_ans_plus_tot",
+                                    "key": "Nb_naissances_20_ans_plus_tot",
                                     "type": "object",
                                     "fields": [
                                         {
-                                            "name": "CH",
+                                            "key": "CH",
                                             "type": "integer"
                                         },
                                         {
-                                            "name": "VD",
+                                            "key": "VD",
                                             "type": "integer"
                                         }
                                     ]
@@ -151,7 +151,7 @@
                 },
                 {
                     "name": "abbreviations_and_acronyms",
-                    "path": "data/abbreviations/acronyms.json",
+                    "path": "data/acronyms/acronyms.json",
                     "structure": "flat",
                     "root_key": "data",
                     "nested_structure": []

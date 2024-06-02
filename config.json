@@ -23,23 +23,23 @@
 				"add_to_metadata": true,
 				"fields": [
 				  {
-					"name": "femmes",
+					"key": "femmes",
 					"type": "integer"
 				  },
 				  {
-					"name": "hommes",
+					"key": "hommes",
 					"type": "integer"
 				  },
 				  {
-					"name": "etranger",
+					"key": "etranger",
 					"type": "integer"
 				  },
 				  {
-					"name": "CH",
+					"key": "CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "total",
+					"key": "total",
 					"type": "integer"
 				  }
 				]
@@ -64,23 +64,23 @@
 				"add_to_metadata": true,
 				"fields": [
 				  {
-					"name": "VD",
+					"key": "VD",
 					"type": "integer"
 				  },
 				  {
-					"name": "CH",
+					"key": "CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "Int",
+					"key": "Int",
 					"type": "integer"
 				  },
 				  {
-					"name": "NR",
+					"key": "NR",
 					"type": "integer"
 				  },
 				  {
-					"name": "Tot",
+					"key": "Tot",
 					"type": "integer"
 				  }
 				]
@@ -119,27 +119,27 @@
 				"add_to_metadata": true,
 				"fields": [
 				  {
-					"name": "Nb_etudiants_CH",
+					"key": "Nb_etudiants_CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_etudiants_UNIL",
+					"key": "Nb_etudiants_UNIL",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_maturites_CH",
+					"key": "Nb_maturites_CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_maturites_VD",
+					"key": "Nb_maturites_VD",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_naissances_20_ans_plus_tot_CH",
+					"key": "Nb_naissances_20_ans_plus_tot_CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_naissances_20_ans_plus_tot_VD",
+					"key": "Nb_naissances_20_ans_plus_tot_VD",
 					"type": "integer"
 				  }
 				]

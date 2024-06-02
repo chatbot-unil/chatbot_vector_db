@@ -7,18 +7,20 @@ import uuid
 from langchain.schema import Document
 import logging
 
-logging_level = os.getenv("LOGGING_LEVEL", "DEBUG")
+load_dotenv()
+
+logging_level = os.getenv("LOGGING_LEVEL", "INFO")
 
 if logging_level == "DEBUG":
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 elif logging_level == "INFO":
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.INFO)
 
 logger = logging.getLogger(__name__)
 
-load_dotenv()
 
-config_path = 'config.json'
+config_path = os.getenv("CONFIG_PATH", "config.json")
+
 with open(config_path, 'r') as f:
     config = json.load(f)
 
@@ -81,7 +83,7 @@ def process_nested_file(data, file_config, context):
                 if 'fields' in level:
                     for field in level['fields']:
                         print(f"Field: {field}")
-                        field_name = field['name']
+                        field_name = field['key']
 
                         if isinstance(nested_values, dict):
                             field_value = nested_values.get(field_name, None)
@@ -118,7 +120,10 @@ def process_file(file_config, collection):
 
             elif file_config.get('structure') == 'flat':
                 documents = process_flat_file(data, file_config, context)
-        
+            
+            # elif file_config.get('structure') == 'nested_w_object':
+            #     documents = process_nested_with_object(data, file_config, context)
+            
         for doc in documents:
             collection.upsert(
                 ids=[str(uuid.uuid1())],
