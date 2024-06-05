@@ -2,8 +2,8 @@
 	"embedding_model": "text-embedding-3-small",
 	"collections": [
 	  {
-		"name": "students_autumn",
-		"description": "Cette collections contient des données sur les étudiants inscrits à l'UNIL pour le semestre d'automne. Les données sont ventilées plueisuers catégories, notamment par faculté, par sexe, par nationalité, par canton de domicile, etc.",
+		"name": "students_autumn_faculty_nationality_sex",
+		"description": "Cette collections contient des données sur les étudiants inscrits à l'UNIL pour le semestre d'automne. Les données sont ventilées plueisuers catégories, notamment par faculté, par sexe, par nationalité",
 		"files": [
 		  {
 			"name": "student_enrollment_by_faculty_2011_2021",
@@ -23,70 +23,76 @@
 				"add_to_metadata": true,
 				"fields": [
 				  {
-					"name": "femmes",
+					"key": "femmes",
 					"type": "integer"
 				  },
 				  {
-					"name": "hommes",
+					"key": "hommes",
 					"type": "integer"
 				  },
 				  {
-					"name": "etranger",
+					"key": "etranger",
 					"type": "integer"
 				  },
 				  {
-					"name": "CH",
+					"key": "CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "total",
-					"type": "integer"
-				  }
-				]
-			  }
-			]
-		  },
-		  {
-			"name": "student_enrollment_by_domicile_2011_2021",
-			"path": "data/students_autumn/student_enrollment_by_domicile_2011_2021.json",
-			"structure": "nested",
-			"root_key": "data",
-			"nested_structure": [
-			  {
-				"key": "year",
-				"type": "integer",
-				"is_root": true,
-				"add_to_metadata": true
-			  },
-			  {
-				"key": "faculty",
-				"type": "object",
-				"add_to_metadata": true,
-				"fields": [
-				  {
-					"name": "VD",
-					"type": "integer"
-				  },
-				  {
-					"name": "CH",
-					"type": "integer"
-				  },
-				  {
-					"name": "Int",
-					"type": "integer"
-				  },
-				  {
-					"name": "NR",
-					"type": "integer"
-				  },
-				  {
-					"name": "Tot",
+					"key": "total",
 					"type": "integer"
 				  }
 				]
 			  }
 			]
 		  }
+		]
+	  },
+	  {
+		"name": "students_autumn_faculty_domicile",
+		"description": "Cette collections contient des données sur les étudiants inscrits à l'UNIL pour le semestre d'automne. Les données sont ventilées plueisuers catégories, notamment par faculté, par domicile avant l'inscription.",
+		"files": [
+			{
+				"name": "student_enrollment_by_domicile_2011_2021",
+				"path": "data/students_autumn/student_enrollment_by_domicile_2011_2021.json",
+				"structure": "nested",
+				"root_key": "data",
+				"nested_structure": [
+				  {
+					"key": "year",
+					"type": "integer",
+					"is_root": true,
+					"add_to_metadata": true
+				  },
+				  {
+					"key": "faculty",
+					"type": "object",
+					"add_to_metadata": true,
+					"fields": [
+					  {
+						"key": "VD",
+						"type": "integer"
+					  },
+					  {
+						"key": "CH",
+						"type": "integer"
+					  },
+					  {
+						"key": "Int",
+						"type": "integer"
+					  },
+					  {
+						"key": "NR",
+						"type": "integer"
+					  },
+					  {
+						"key": "Tot",
+						"type": "integer"
+					  }
+					]
+				  }
+				]
+			}
 		]
 	  },
 	  {
@@ -119,27 +125,27 @@
 				"add_to_metadata": true,
 				"fields": [
 				  {
-					"name": "Nb_etudiants_CH",
+					"key": "Nb_etudiants_CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_etudiants_UNIL",
+					"key": "Nb_etudiants_UNIL",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_maturites_CH",
+					"key": "Nb_maturites_CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_maturites_VD",
+					"key": "Nb_maturites_VD",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_naissances_20_ans_plus_tot_CH",
+					"key": "Nb_naissances_20_ans_plus_tot_CH",
 					"type": "integer"
 				  },
 				  {
-					"name": "Nb_naissances_20_ans_plus_tot_VD",
+					"key": "Nb_naissances_20_ans_plus_tot_VD",
 					"type": "integer"
 				  }
 				]

@@ -1,5 +1,5 @@
 {
-    "context": "Étudiant·e·s inscrit·e·s au semestre d’automne par faculté selon le lieu de domicile avant les études de 2011 à 2021",
+    "context": "Étudiant·e·s inscrit·e·s au semestre d’automne par faculté selon le lieu de domicile avant les études de 2011 à 2021. la structure TOTAL_STUDENT_UNIL représente le nombre total d'étudiant inscrit à l'Université de Lausanne par année",
     "data": {
         "2011": {
             "FTSR": {
@@ -7,56 +7,56 @@
                 "CH": 14,
                 "Int": 26,
                 "NR": 0,
-                "Tot": 79
+                "total": 79
             },
             "FDCA": {
                 "VD": 854,
                 "CH": 481,
                 "Int": 303,
                 "NR": 0,
-                "Tot": 1638
+                "total": 1638
             },
             "Lettres": {
                 "VD": 1225,
                 "CH": 652,
                 "Int": 440,
                 "NR": 0,
-                "Tot": 2317
+                "total": 2317
             },
             "SSP": {
                 "VD": 1216,
                 "CH": 1017,
                 "Int": 316,
                 "NR": 0,
-                "Tot": 2549
+                "total": 2549
             },
             "HEC": {
                 "VD": 882,
                 "CH": 659,
                 "Int": 780,
                 "NR": 10,
-                "Tot": 2321
+                "total": 2321
             },
             "FBM": {
                 "VD": 1287,
                 "CH": 873,
                 "Int": 444,
                 "NR": 0,
-                "Tot": 2604
+                "total": 2604
             },
             "FGSE": {
                 "VD": 309,
                 "CH": 307,
                 "Int": 118,
                 "NR": 0,
-                "Tot": 734
+                "total": 734
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 5812,
                 "CH": 4003,
                 "Int": 2427,
                 "NR": 121,
-                "Tot": 12242
+                "total": 12242
             }
         },
         "2012": {
@@ -65,56 +65,56 @@
                 "CH": 15,
                 "Int": 31,
                 "NR": 0,
-                "Tot": 78
+                "total": 78
             },
             "FDCA": {
                 "VD": 904,
                 "CH": 498,
                 "Int": 309,
                 "NR": 0,
-                "Tot": 1711
+                "total": 1711
             },
             "Lettres": {
                 "VD": 1176,
                 "CH": 655,
                 "Int": 460,
                 "NR": 0,
-                "Tot": 2291
+                "total": 2291
             },
             "SSP": {
                 "VD": 1294,
                 "CH": 1107,
                 "Int": 370,
                 "NR": 0,
-                "Tot": 2771
+                "total": 2771
             },
             "HEC": {
                 "VD": 949,
                 "CH": 719,
                 "Int": 919,
                 "NR": 0,
-                "Tot": 2587
+                "total": 2587
             },
             "FBM": {
                 "VD": 1345,
                 "CH": 890,
                 "Int": 490,
                 "NR": 0,
-                "Tot": 2725
+                "total": 2725
             },
             "FGSE": {
                 "VD": 350,
                 "CH": 318,
                 "Int": 124,
                 "NR": 0,
-                "Tot": 792
+                "total": 792
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 6020,
                 "CH": 4202,
                 "Int": 2703,
                 "NR": 312,
-                "Tot": 12955
+                "total": 12955
             }
         },
         "2013": {
@@ -123,56 +123,56 @@
                 "CH": 17,
                 "Int": 31,
                 "NR": 0,
-                "Tot": 89
+                "total": 89
             },
             "FDCA": {
                 "VD": 919,
                 "CH": 501,
                 "Int": 353,
                 "NR": 0,
-                "Tot": 1773
+                "total": 1773
             },
             "Lettres": {
                 "VD": 1147,
                 "CH": 640,
                 "Int": 485,
                 "NR": 0,
-                "Tot": 2272
+                "total": 2272
             },
             "SSP": {
                 "VD": 1370,
                 "CH": 1204,
                 "Int": 419,
                 "NR": 0,
-                "Tot": 2993
+                "total": 2993
             },
             "HEC": {
                 "VD": 993,
                 "CH": 713,
                 "Int": 1022,
                 "NR": 0,
-                "Tot": 2738
+                "total": 2738
             },
             "FBM": {
                 "VD": 1347,
                 "CH": 950,
                 "Int": 557,
                 "NR": 0,
-                "Tot": 2854
+                "total": 2854
             },
             "FGSE": {
                 "VD": 365,
                 "CH": 326,
                 "Int": 122,
                 "NR": 0,
-                "Tot": 813
+                "total": 813
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 6182,
                 "CH": 4351,
                 "Int": 2989,
                 "NR": 296,
-                "Tot": 13643
+                "total": 13643
             }
         },
         "2014": {
@@ -181,56 +181,56 @@
                 "CH": 21,
                 "Int": 32,
                 "NR": 0,
-                "Tot": 101
+                "total": 101
             },
             "FDCA": {
                 "VD": 977,
                 "CH": 587,
                 "Int": 333,
                 "NR": 0,
-                "Tot": 1897
+                "total": 1897
             },
             "Lettres": {
                 "VD": 1112,
                 "CH": 630,
                 "Int": 485,
                 "NR": 0,
-                "Tot": 2227
+                "total": 2227
             },
             "SSP": {
                 "VD": 1376,
                 "CH": 1104,
                 "Int": 410,
                 "NR": 0,
-                "Tot": 2890
+                "total": 2890
             },
             "HEC": {
                 "VD": 1021,
                 "CH": 808,
                 "Int": 1082,
                 "NR": 0,
-                "Tot": 2911
+                "total": 2911
             },
             "FBM": {
                 "VD": 1439,
                 "CH": 941,
                 "Int": 589,
                 "NR": 0,
-                "Tot": 2969
+                "total": 2969
             },
             "FGSE": {
                 "VD": 385,
                 "CH": 322,
                 "Int": 151,
                 "NR": 0,
-                "Tot": 858
+                "total": 858
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 6358,
                 "CH": 4413,
                 "Int": 3082,
                 "NR": 285,
-                "Tot": 14165
+                "total": 14165
             }
         },
         "2015": {
@@ -239,56 +239,56 @@
                 "CH": 23,
                 "Int": 36,
                 "NR": 0,
-                "Tot": 121
+                "total": 121
             },
             "FDCA": {
                 "VD": 988,
                 "CH": 567,
                 "Int": 364,
                 "NR": 0,
-                "Tot": 1919
+                "total": 1919
             },
             "Lettres": {
                 "VD": 1120,
                 "CH": 622,
                 "Int": 491,
                 "NR": 0,
-                "Tot": 2233
+                "total": 2233
             },
             "SSP": {
                 "VD": 1394,
                 "CH": 1108,
                 "Int": 370,
                 "NR": 0,
-                "Tot": 2872
+                "total": 2872
             },
             "HEC": {
                 "VD": 1052,
                 "CH": 775,
                 "Int": 1046,
                 "NR": 0,
-                "Tot": 2873
+                "total": 2873
             },
             "FBM": {
                 "VD": 1478,
                 "CH": 920,
                 "Int": 625,
                 "NR": 0,
-                "Tot": 3023
+                "total": 3023
             },
             "FGSE": {
                 "VD": 382,
                 "CH": 312,
                 "Int": 158,
                 "NR": 0,
-                "Tot": 852
+                "total": 852
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 6476,
                 "CH": 4327,
                 "Int": 3090,
                 "NR": 294,
-                "Tot": 14189
+                "total": 14189
             }
         },
         "2016": {
@@ -297,56 +297,56 @@
                 "CH": 26,
                 "Int": 36,
                 "NR": 0,
-                "Tot": 119
+                "total": 119
             },
             "FDCA": {
                 "VD": 1029,
                 "CH": 578,
                 "Int": 402,
                 "NR": 0,
-                "Tot": 2009
+                "total": 2009
             },
             "Lettres": {
                 "VD": 1122,
                 "CH": 586,
                 "Int": 486,
                 "NR": 0,
-                "Tot": 2194
+                "total": 2194
             },
             "SSP": {
                 "VD": 1455,
                 "CH": 1111,
                 "Int": 366,
                 "NR": 0,
-                "Tot": 2932
+                "total": 2932
             },
             "HEC": {
                 "VD": 1069,
                 "CH": 795,
                 "Int": 1035,
                 "NR": 0,
-                "Tot": 2899
+                "total": 2899
             },
             "FBM": {
                 "VD": 1605,
                 "CH": 959,
                 "Int": 656,
                 "NR": 0,
-                "Tot": 3220
+                "total": 3220
             },
             "FGSE": {
                 "VD": 376,
                 "CH": 286,
                 "Int": 155,
                 "NR": 0,
-                "Tot": 817
+                "total": 817
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 6713,
                 "CH": 4341,
                 "Int": 3136,
                 "NR": 322,
-                "Tot": 14475
+                "total": 14475
             }
         },
         "2017": {
@@ -355,56 +355,56 @@
                 "CH": 25,
                 "Int": 38,
                 "NR": 0,
-                "Tot": 120
+                "total": 120
             },
             "FDCA": {
                 "VD": 1033,
                 "CH": 564,
                 "Int": 396,
                 "NR": 0,
-                "Tot": 1993
+                "total": 1993
             },
             "Lettres": {
                 "VD": 1141,
                 "CH": 610,
                 "Int": 478,
                 "NR": 0,
-                "Tot": 2229
+                "total": 2229
             },
             "SSP": {
                 "VD": 1589,
                 "CH": 1118,
                 "Int": 379,
                 "NR": 0,
-                "Tot": 3086
+                "total": 3086
             },
             "HEC": {
                 "VD": 1134,
                 "CH": 807,
                 "Int": 1066,
                 "NR": 0,
-                "Tot": 3007
+                "total": 3007
             },
             "FBM": {
                 "VD": 1635,
                 "CH": 1001,
                 "Int": 732,
                 "NR": 0,
-                "Tot": 3368
+                "total": 3368
             },
             "FGSE": {
                 "VD": 392,
                 "CH": 315,
                 "Int": 172,
                 "NR": 0,
-                "Tot": 879
+                "total": 879
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 6981,
                 "CH": 4440,
                 "Int": 3261,
                 "NR": 458,
-                "Tot": 14976
+                "total": 14976
             }
         },
         "2018": {
@@ -413,56 +413,56 @@
                 "CH": 21,
                 "Int": 34,
                 "NR": 0,
-                "Tot": 103
+                "total": 103
             },
             "FDCA": {
                 "VD": 1060,
                 "CH": 562,
                 "Int": 407,
                 "NR": 0,
-                "Tot": 2029
+                "total": 2029
             },
             "Lettres": {
                 "VD": 1181,
                 "CH": 587,
                 "Int": 467,
                 "NR": 0,
-                "Tot": 2235
+                "total": 2235
             },
             "SSP": {
                 "VD": 1636,
                 "CH": 1160,
                 "Int": 389,
                 "NR": 0,
-                "Tot": 3185
+                "total": 3185
             },
             "HEC": {
                 "VD": 1241,
                 "CH": 841,
                 "Int": 1005,
                 "NR": 0,
-                "Tot": 3087
+                "total": 3087
             },
             "FBM": {
                 "VD": 1712,
                 "CH": 1017,
                 "Int": 752,
                 "NR": 0,
-                "Tot": 3481
+                "total": 3481
             },
             "FGSE": {
                 "VD": 401,
                 "CH": 314,
                 "Int": 177,
                 "NR": 0,
-                "Tot": 892
+                "total": 892
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 7279,
                 "CH": 4502,
                 "Int": 3231,
                 "NR": 524,
-                "Tot": 15334
+                "total": 15334
             }
         },
         "2019": {
@@ -471,56 +471,56 @@
                 "CH": 21,
                 "Int": 38,
                 "NR": 0,
-                "Tot": 107
+                "total": 107
             },
             "FDCA": {
                 "VD": 1084,
                 "CH": 610,
                 "Int": 424,
                 "NR": 0,
-                "Tot": 2118
+                "total": 2118
             },
             "Lettres": {
                 "VD": 1212,
                 "CH": 583,
                 "Int": 460,
                 "NR": 0,
-                "Tot": 2255
+                "total": 2255
             },
             "SSP": {
                 "VD": 1630,
                 "CH": 1204,
                 "Int": 392,
                 "NR": 0,
-                "Tot": 3226
+                "total": 3226
             },
             "HEC": {
                 "VD": 1219,
                 "CH": 878,
                 "Int": 1007,
                 "NR": 0,
-                "Tot": 3104
+                "total": 3104
             },
             "FBM": {
                 "VD": 1836,
                 "CH": 1100,
                 "Int": 752,
                 "NR": 0,
-                "Tot": 3688
+                "total": 3688
             },
             "FGSE": {
                 "VD": 406,
                 "CH": 327,
                 "Int": 179,
                 "NR": 0,
-                "Tot": 912
+                "total": 912
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 7435,
                 "CH": 4723,
                 "Int": 3252,
                 "NR": 535,
-                "Tot": 15868
+                "total": 15868
             }
         },
         "2020": {
@@ -529,56 +529,56 @@
                 "CH": 18,
                 "Int": 36,
                 "NR": 0,
-                "Tot": 98
+                "total": 98
             },
             "FDCA": {
                 "VD": 1171,
                 "CH": 646,
                 "Int": 462,
                 "NR": 0,
-                "Tot": 2279
+                "total": 2279
             },
             "Lettres": {
                 "VD": 1294,
                 "CH": 547,
                 "Int": 433,
                 "NR": 0,
-                "Tot": 2274
+                "total": 2274
             },
             "SSP": {
                 "VD": 1837,
                 "CH": 1267,
                 "Int": 404,
                 "NR": 0,
-                "Tot": 3508
+                "total": 3508
             },
             "HEC": {
                 "VD": 1347,
                 "CH": 906,
                 "Int": 1053,
                 "NR": 0,
-                "Tot": 3306
+                "total": 3306
             },
             "FBM": {
                 "VD": 2028,
                 "CH": 1136,
                 "Int": 819,
                 "NR": 0,
-                "Tot": 3983
+                "total": 3983
             },
             "FGSE": {
                 "VD": 430,
                 "CH": 338,
                 "Int": 179,
                 "NR": 0,
-                "Tot": 947
+                "total": 947
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 8151,
                 "CH": 4858,
                 "Int": 3386,
                 "NR": 535,
-                "Tot": 16919
+                "total": 16919
             }
         },
         "2021": {
@@ -587,56 +587,56 @@
                 "CH": 15,
                 "Int": 35,
                 "NR": 0,
-                "Tot": 89
+                "total": 89
             },
             "FDCA": {
                 "VD": 1165,
                 "CH": 681,
                 "Int": 517,
                 "NR": 0,
-                "Tot": 2363
+                "total": 2363
             },
             "Lettres": {
                 "VD": 1281,
                 "CH": 542,
                 "Int": 377,
                 "NR": 0,
-                "Tot": 2200
+                "total": 2200
             },
             "SSP": {
                 "VD": 1821,
                 "CH": 1353,
                 "Int": 454,
                 "NR": 0,
-                "Tot": 3628
+                "total": 3628
             },
             "HEC": {
                 "VD": 1380,
                 "CH": 906,
                 "Int": 1017,
                 "NR": 0,
-                "Tot": 3303
+                "total": 3303
             },
             "FBM": {
                 "VD": 2034,
                 "CH": 1218,
                 "Int": 856,
                 "NR": 0,
-                "Tot": 4108
+                "total": 4108
             },
             "FGSE": {
                 "VD": 406,
                 "CH": 318,
                 "Int": 191,
                 "NR": 0,
-                "Tot": 915
+                "total": 915
             },
-            "TOTAL": {
+            "TOTAL_STUDENT_UNIL": {
                 "VD": 8126,
                 "CH": 5033,
 				"Int": 3447,
 				"NR": 535,
-				"Tot": 17141
+				"total": 17141
 			}
 		}
 	}
