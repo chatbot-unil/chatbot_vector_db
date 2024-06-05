@@ -1,5 +1,5 @@
 {
-    "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne de 2011 à 2021 à l'Université de Lausanne.",
+    "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne de 2011 à 2021 à l'Université de Lausanne. la structure TOTAL_STUDENT_UNIL représente le nombre total d'étudiant inscrit à l'Université de Lausanne. pour l'année",
 	"data" : {
 		"2011": {
 			"Lettres": {
@@ -23,7 +23,7 @@
 				"CH": 602,
 				"total": 734
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 6767,
 				"hommes": 5445,
 				"etranger": 2967,
@@ -81,7 +81,7 @@
 				"CH": 646,
 				"total": 792
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 7111,
 				"hommes": 5844,
 				"etranger": 3288,
@@ -139,7 +139,7 @@
 				"CH": 670,
 				"total": 813
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 7478,
 				"hommes": 6165,
 				"etranger": 3657,
@@ -204,7 +204,7 @@
 				"CH": 700,
 				"total": 858
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 7736,
 				"hommes": 6429,
 				"etranger": 3799,
@@ -269,7 +269,7 @@
 				"CH": 686,
 				"total": 852
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 7705,
 				"hommes": 6484,
 				"etranger": 3749,
@@ -334,7 +334,7 @@
 				"CH": 647,
 				"total": 817
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 7827,
 				"hommes": 6648,
 				"etranger": 3915,
@@ -399,7 +399,7 @@
 				"CH": 691,
 				"total": 879
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 8135,
 				"hommes": 6841,
 				"etranger": 3992,
@@ -464,7 +464,7 @@
 				"CH": 704,
 				"total": 892
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 8480,
 				"hommes": 6854,
 				"etranger": 3967,
@@ -529,7 +529,7 @@
 				"CH": 723,
 				"total": 912
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 8892,
 				"hommes": 6976,
 				"etranger": 4073,
@@ -594,7 +594,7 @@
 				"CH": 753,
 				"total": 947
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 9758,
 				"hommes": 7161,
 				"etranger": 4311,
@@ -659,7 +659,7 @@
 				"CH": 706,
 				"total": 915
 			},
-			"TOTAL": {
+			"TOTAL_STUDENT_UNIL": {
 				"femmes": 9985,
 				"hommes": 7156,
 				"etranger": 4394,

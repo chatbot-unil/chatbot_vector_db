@@ -2,8 +2,8 @@
 	"embedding_model": "text-embedding-3-small",
 	"collections": [
 	  {
-		"name": "students_autumn",
-		"description": "Cette collections contient des données sur les étudiants inscrits à l'UNIL pour le semestre d'automne. Les données sont ventilées plueisuers catégories, notamment par faculté, par sexe, par nationalité, par canton de domicile, etc.",
+		"name": "students_autumn_faculty_nationality_sex",
+		"description": "Cette collections contient des données sur les étudiants inscrits à l'UNIL pour le semestre d'automne. Les données sont ventilées plueisuers catégories, notamment par faculté, par sexe, par nationalité",
 		"files": [
 		  {
 			"name": "student_enrollment_by_faculty_2011_2021",
@@ -45,48 +45,54 @@
 				]
 			  }
 			]
-		  },
-		  {
-			"name": "student_enrollment_by_domicile_2011_2021",
-			"path": "data/students_autumn/student_enrollment_by_domicile_2011_2021.json",
-			"structure": "nested",
-			"root_key": "data",
-			"nested_structure": [
-			  {
-				"key": "year",
-				"type": "integer",
-				"is_root": true,
-				"add_to_metadata": true
-			  },
-			  {
-				"key": "faculty",
-				"type": "object",
-				"add_to_metadata": true,
-				"fields": [
+		  }
+		]
+	  },
+	  {
+		"name": "students_autumn_faculty_domicile",
+		"description": "Cette collections contient des données sur les étudiants inscrits à l'UNIL pour le semestre d'automne. Les données sont ventilées plueisuers catégories, notamment par faculté, par domicile avant l'inscription.",
+		"files": [
+			{
+				"name": "student_enrollment_by_domicile_2011_2021",
+				"path": "data/students_autumn/student_enrollment_by_domicile_2011_2021.json",
+				"structure": "nested",
+				"root_key": "data",
+				"nested_structure": [
 				  {
-					"key": "VD",
-					"type": "integer"
+					"key": "year",
+					"type": "integer",
+					"is_root": true,
+					"add_to_metadata": true
 				  },
 				  {
-					"key": "CH",
-					"type": "integer"
-				  },
-				  {
-					"key": "Int",
-					"type": "integer"
-				  },
-				  {
-					"key": "NR",
-					"type": "integer"
-				  },
-				  {
-					"key": "Tot",
-					"type": "integer"
+					"key": "faculty",
+					"type": "object",
+					"add_to_metadata": true,
+					"fields": [
+					  {
+						"key": "VD",
+						"type": "integer"
+					  },
+					  {
+						"key": "CH",
+						"type": "integer"
+					  },
+					  {
+						"key": "Int",
+						"type": "integer"
+					  },
+					  {
+						"key": "NR",
+						"type": "integer"
+					  },
+					  {
+						"key": "Tot",
+						"type": "integer"
+					  }
+					]
 				  }
 				]
-			  }
-			]
-		  }
+			}
 		]
 	  },
 	  {
