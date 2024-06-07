@@ -86,7 +86,7 @@
 						"type": "integer"
 					  },
 					  {
-						"key": "Tot",
+						"key": "total",
 						"type": "integer"
 					  }
 					]

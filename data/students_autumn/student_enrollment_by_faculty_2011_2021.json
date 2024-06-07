@@ -1,5 +1,5 @@
 {
-    "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne de 2011 à 2021 à l'Université de Lausanne. la structure TOTAL_STUDENT_UNIL représente le nombre total d'étudiant inscrit à l'Université de Lausanne. pour l'année",
+    "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne de 2011 à 2021 à l'Université de Lausanne.",
 	"data" : {
 		"2011": {
 			"Lettres": {

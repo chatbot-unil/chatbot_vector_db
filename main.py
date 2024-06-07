@@ -82,10 +82,7 @@ def process_nested_file(data, file_config, context):
 
                 if 'fields' in level:
                     for field in level['fields']:
-                        print(f"Field: {field}")
                         field_name = field['key']
-
-                        print(f"Field name: {field_name}")
 
                         if isinstance(nested_values, dict):
                             field_value = nested_values.get(field_name, None)
@@ -102,7 +99,6 @@ def process_nested_file(data, file_config, context):
                             metadata[field_name] = field_value
 
             metadata['context'] = context
-            document_content['context'] = context
             documents.append(Document(page_content=json.dumps(document_content, ensure_ascii=False), metadata=metadata))
             logger.debug(f"Contenu du document: {pretty_print(document_content)}")
             logger.debug(f"Métadonnées: {pretty_print(metadata)}")
