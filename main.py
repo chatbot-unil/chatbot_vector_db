@@ -6,6 +6,9 @@ import json
 import uuid
 from langchain.schema import Document
 import logging
+import hashlib
+from datetime import datetime
+import psycopg
 
 load_dotenv()
 
@@ -28,6 +31,52 @@ os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 chroma_host = os.getenv("CHROMADB_HOST", "localhost")
 chroma_port = int(os.getenv("CHROMADB_PORT", 3003))
+
+postgres_user = os.getenv('POSTGRES_USER')
+postgres_password = os.getenv('POSTGRES_PASSWORD')
+postgres_db = os.getenv('POSTGRES_DB')
+postgres_host = os.getenv('POSTGRES_HOST', 'localhost')
+postgres_port = os.getenv('POSTGRES_PORT', 5432)
+
+global conn
+
+conn = psycopg.connect(
+    dbname=postgres_db,
+    user=postgres_user,
+    password=postgres_password,
+    host=postgres_host,
+    port=postgres_port
+)
+
+def insert_collection(collection_name, description, host, port, hash_, last_update):
+    with conn.cursor() as cursor:
+        cursor.execute("""
+            INSERT INTO collections (collection_name, desc_collection, host, port, hash_collection, last_update)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """, (collection_name, description, host, port, hash_, last_update))
+        conn.commit()
+        logger.info(f"Collection {collection_name} insérée")
+
+def update_collection(collection_name, description, host, port, hash_, last_update):
+    with conn.cursor() as cursor:
+        cursor.execute("""
+            UPDATE collections
+            SET desc_collection = %s, host = %s, port = %s, hash_collection = %s, last_update = %s
+            WHERE collection_name = %s
+        """, (description, host, port, hash_, last_update, collection_name))
+        conn.commit()
+        logger.info(f"Collection {collection_name} mise à jour")
+
+def get_hash(collection_name):
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT hash_collection FROM collections WHERE collection_name = %s", (collection_name,))
+        hash_ = cursor.fetchone()
+        return hash_
+
+def generate_hash(data):
+    hash_object = hashlib.sha256()
+    hash_object.update(data.encode('utf-8'))
+    return hash_object.hexdigest()
 
 def pretty_print(json_data):
     return json.dumps(json_data, indent=4, ensure_ascii=False)
@@ -143,10 +192,33 @@ if __name__ == "__main__":
     try:
         chroma_client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
         openai_ef = embedding_functions.OpenAIEmbeddingFunction(api_key=os.getenv("OPENAI_API_KEY"), model_name=config["embedding_model"])
+        json_to_save_db = {"all_collections": []}
         
         for collection_config in config["collections"]:
             collection = chroma_client.get_or_create_collection(name=collection_config["name"], embedding_function=openai_ef)
+            if isinstance(collection_config["description"], list):
+                description =  " ".join(collection_config["description"])
+            else:
+                description = collection_config["description"]
+                
+            data_string = f'{collection_config["name"]}{description}{chroma_host}{chroma_port}'
+            new_data_hash = generate_hash(data_string)
+            data_to_save_db = { "collection": collection_config["name"], "description": description, "host": chroma_host, "port": chroma_port, "hash": new_data_hash, "last_update": datetime.now() }
+            json_to_save_db["all_collections"].append(data_to_save_db)
             process_files(collection_config["files"], collection)
 
+            existing_hash = get_hash(data_to_save_db["collection"])
+
+            if existing_hash is None:
+                insert_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["hash"], data_to_save_db["last_update"])
+            elif existing_hash[0] != new_data_hash:
+                update_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["hash"], data_to_save_db["last_update"])
+            else:
+                logger.info(f"Aucune mise à jour nécessaire pour la collection {data_to_save_db['collection']}")
+
+        logger.info(f"all_collections: {pretty_print(json_to_save_db)}")
     except Exception as e:
         logger.error(f"Erreur lors de l'exécution du script: {str(e)}")
+    finally:
+        conn.close()
+        logger.info("Connexion à la base de données fermée")

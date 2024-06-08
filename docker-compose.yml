@@ -4,6 +4,11 @@ services:
     ports:
       - 3003:8000
     container_name: chromadb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://chromadb:8000/api/v1/tenants/default_tenant"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
     networks:
       - net
 
@@ -14,12 +19,18 @@ services:
     container_name: init-data
     depends_on:
       chromadb:
-        condition: service_started
+        condition: service_healthy
     environment:
       - CHROMADB_HOST=chromadb
       - CHROMADB_PORT=8000
       - LOGGING_LEVEL=INFO
       - CONFIG_PATH=config.json
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
     networks:
       - net
 
