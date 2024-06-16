@@ -18,4 +18,5 @@ services:
     depends_on:
       chromadb:
         condition: service_healthy
-
+      postgres:
+        condition: service_healthy
