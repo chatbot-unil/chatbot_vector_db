@@ -187,6 +187,14 @@ def process_file(file_config, collection):
 def process_files(file_configs, collection):
     for file_config in file_configs:
         process_file(file_config, collection)
+        
+def hash_file_content(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = f.read()
+        hash_object = hashlib.sha256()
+        hash_object.update(data.encode('utf-8'))
+        return hash_object.hexdigest()
+   
 
 if __name__ == "__main__":
     try:
@@ -201,18 +209,24 @@ if __name__ == "__main__":
             else:
                 description = collection_config["description"]
                 
-            data_string = f'{collection_config["name"]}{description}{chroma_host}{chroma_port}'
-            new_data_hash = generate_hash(data_string)
+            new_data_hash = ""
+            for file_config in collection_config["files"]:
+                file_path = file_config["path"]
+                new_data_hash += hash_file_content(file_path)
+            logger.info(f"new_data_hash: {new_data_hash}")
             data_to_save_db = { "collection": collection_config["name"], "description": description, "host": chroma_host, "port": chroma_port, "hash": new_data_hash, "last_update": datetime.now() }
             json_to_save_db["all_collections"].append(data_to_save_db)
-            process_files(collection_config["files"], collection)
-
+            
             existing_hash = get_hash(data_to_save_db["collection"])
 
             if existing_hash is None:
+                logger.info(f"Insertion nécessaire pour la collection {data_to_save_db['collection']}")
                 insert_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["hash"], data_to_save_db["last_update"])
+                process_files(collection_config["files"], collection)
             elif existing_hash[0] != new_data_hash:
+                logger.info(f"Mise à jour nécessaire pour la collection {data_to_save_db['collection']}")
                 update_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["hash"], data_to_save_db["last_update"])
+                process_files(collection_config["files"], collection)
             else:
                 logger.info(f"Aucune mise à jour nécessaire pour la collection {data_to_save_db['collection']}")
 
