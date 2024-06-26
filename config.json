@@ -109,8 +109,7 @@
 		"name": "abbreviations_and_acronyms",
 		"description": [
 			"Ce retriever est basé sur une base de données de statistiques de l'Université de Lausanne.",
-            "Il permet de répondre à des questions concernant des données démographiques et de population pour le canton de Vaud et la Suisse. Ces données on été fournies par l'Office fédéral de la statistique.",
-            "Il comprend aussi des données sur les néssances 20 ans auparavant pour le canton de Vaud et la Suisse."
+            "Il contient des abréviations et acronymes utilisés dans l'annuaire statistique de l'Université de Lausanne."
 		],
 		"files": [
 		  {
@@ -126,7 +125,8 @@
 		"name": "demographics_and_population",
 		"description": [
 			"Ce retriever est basé sur une base de données de statistiques de l'Université de Lausanne.",
-            "Il contient des abréviations et acronymes utilisés dans l'annuaire statistique de l'Université de Lausanne."
+            "Il permet de répondre à des questions concernant des données démographiques et de population pour le canton de Vaud et la Suisse. Ces données on été fournies par l'Office fédéral de la statistique.",
+            "Il comprend aussi des données sur les néssances 20 ans auparavant pour le canton de Vaud et la Suisse."
 		],
 		"files": [
 		  {

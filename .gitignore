@@ -1,3 +1,4 @@
 .env
 .DS_Store
 config.full.json
+cube_part/*
