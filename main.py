@@ -48,24 +48,34 @@ conn = psycopg.connect(
     port=postgres_port
 )
 
-def insert_collection(collection_name, description, host, port, hash_, last_update):
+def insert_collection(collection_name, description, host, port, search_k, hash_, last_update):
     with conn.cursor() as cursor:
         cursor.execute("""
-            INSERT INTO collections (collection_name, desc_collection, host, port, hash_collection, last_update)
-            VALUES (%s, %s, %s, %s, %s, %s)
-        """, (collection_name, description, host, port, hash_, last_update))
+            INSERT INTO collections (collection_name, desc_collection, host, port, search_k, hash_collection, last_update)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (collection_name, description, host, port, search_k, hash_, last_update))
         conn.commit()
         logger.info(f"Collection {collection_name} insérée")
 
-def update_collection(collection_name, description, host, port, hash_, last_update):
+def update_collection(collection_name, description, host, port, search_k, hash_, last_update):
     with conn.cursor() as cursor:
         cursor.execute("""
             UPDATE collections
-            SET desc_collection = %s, host = %s, port = %s, hash_collection = %s, last_update = %s
+            SET desc_collection = %s, host = %s, port = %s, search_k = %s, hash_collection = %s, last_update = %s
             WHERE collection_name = %s
-        """, (description, host, port, hash_, last_update, collection_name))
+        """, (description, host, port, search_k, hash_, last_update, collection_name))
         conn.commit()
         logger.info(f"Collection {collection_name} mise à jour")
+    
+def update_search_k(collection_name, search_k):
+    with conn.cursor() as cursor:
+        cursor.execute("""
+            UPDATE collections
+            SET search_k = %s
+            WHERE collection_name = %s
+        """, (search_k, collection_name))
+        conn.commit()
+        logger.info(f"search_k de la collection {collection_name} mis à jour")
 
 def get_hash(collection_name):
     with conn.cursor() as cursor:
@@ -180,13 +190,14 @@ def process_file(file_config, collection):
             )
         
         logger.info(f"Ajout de {len(documents)} documents à la collection {collection.name}")
-
+        return int(len(documents) * 0.5)
     except Exception as e:
         logger.error(f"Erreur lors du traitement du fichier {file_path}: {str(e)}")
 
 def process_files(file_configs, collection):
     for file_config in file_configs:
-        process_file(file_config, collection)
+        search_k = process_file(file_config, collection)
+    return search_k
         
 def hash_file_content(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -214,19 +225,30 @@ if __name__ == "__main__":
                 file_path = file_config["path"]
                 new_data_hash += hash_file_content(file_path)
             logger.info(f"new_data_hash: {new_data_hash}")
-            data_to_save_db = { "collection": collection_config["name"], "description": description, "host": chroma_host, "port": chroma_port, "hash": new_data_hash, "last_update": datetime.now() }
+            data_to_save_db = { 
+                "collection": collection_config["name"], 
+                "description": description,
+                "host": chroma_host, 
+                "port": chroma_port,
+                "search_k": 10,
+                "hash": new_data_hash, 
+                "last_update": datetime.now().isoformat()
+            }
             json_to_save_db["all_collections"].append(data_to_save_db)
             
             existing_hash = get_hash(data_to_save_db["collection"])
 
             if existing_hash is None:
                 logger.info(f"Insertion nécessaire pour la collection {data_to_save_db['collection']}")
-                insert_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["hash"], data_to_save_db["last_update"])
-                process_files(collection_config["files"], collection)
+                insert_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["search_k"], data_to_save_db["hash"], data_to_save_db["last_update"])
+                search_k = process_files(collection_config["files"], collection)
+                print(f"search_k: {search_k}")
+                update_search_k(data_to_save_db["collection"], search_k)
             elif existing_hash[0] != new_data_hash:
                 logger.info(f"Mise à jour nécessaire pour la collection {data_to_save_db['collection']}")
-                update_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["hash"], data_to_save_db["last_update"])
-                process_files(collection_config["files"], collection)
+                update_collection(data_to_save_db["collection"], data_to_save_db["description"], data_to_save_db["host"], data_to_save_db["port"], data_to_save_db["search_k"], data_to_save_db["hash"], data_to_save_db["last_update"])
+                search_k = process_files(collection_config["files"], collection)
+                update_search_k(data_to_save_db["collection"], search_k)
             else:
                 logger.info(f"Aucune mise à jour nécessaire pour la collection {data_to_save_db['collection']}")
 
