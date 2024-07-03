@@ -9,7 +9,7 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py .
-COPY config.json .
+COPY configs /app/configs
 
 COPY data /app/data
 

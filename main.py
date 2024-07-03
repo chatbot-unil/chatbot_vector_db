@@ -21,8 +21,9 @@ elif logging_level == "INFO":
 
 logger = logging.getLogger(__name__)
 
+config_path = os.getenv("CONFIG_PATH", "configs/config.json")
 
-config_path = os.getenv("CONFIG_PATH", "config.json")
+print(f"config_path: {config_path}")
 
 with open(config_path, 'r') as f:
     config = json.load(f)
