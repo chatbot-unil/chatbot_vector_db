@@ -1,7 +1,8 @@
 .env
 .DS_Store
 config.full.json
-cube_part/*
+test/*
+data/json/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
