@@ -1,6 +1,7 @@
 services:
   chromadb:
-    image: chromadb/chroma
+    image: chromadb/chroma:0.5.5
+
     ports:
       - 3003:3003
     container_name: chromadb
